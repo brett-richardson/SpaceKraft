@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sk_module.name %>
+</p>
+
+<p>
+  <b>Subdomain:</b>
+  <%= @sk_module.subdomain %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%= @sk_module.enabled %>
+</p>
+
+<p>
+  <b>Machine name:</b>
+  <%= @sk_module.machine_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_sk_module_path(@sk_module) %> |
+<%= link_to 'Back', sk_modules_path %>

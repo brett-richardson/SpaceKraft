@@ -1,0 +1,25 @@
+%html
+
+	%head
+		%title Spacekraft
+		= stylesheet_link_tag :all
+		= javascript_include_tag :defaults
+		= csrf_meta_tag
+
+	%body
+
+		%div#page
+
+			%div.container
+
+				%div#header.span-24
+					= render_cell :menu, :secondary
+					= render_cell :menu, :module
+					= render_cell :menu, :primary
+
+				%div#main.span-16
+
+					= yield
+
+				%div#sidebar.span-7
+					%h2 Sidebar

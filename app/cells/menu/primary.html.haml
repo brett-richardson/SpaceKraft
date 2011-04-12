@@ -1,0 +1,19 @@
+%ul#primary-menu
+
+	%li
+		Group: [none]
+
+		%ul
+			%li= link_to_unless_current "Discussions",
+				discussions_url( :subdomain => '' )
+
+			%li= link_to_unless_current "New discussion",
+				new_discussion_url( :subdomain => '' )
+
+	%li
+		= link_to_unless_current "Groups",
+			groups_url( :subdomain => '' )
+
+		%ul
+			%li= link_to_unless_current "New group",
+				new_group_url( :subdomain => '' )

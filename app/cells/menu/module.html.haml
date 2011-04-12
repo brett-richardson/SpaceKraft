@@ -1,0 +1,5 @@
+%ul
+	- @sk_modules.each do |mod|
+
+		%li= link_to_unless_current mod.name,
+			root_url( :subdomain => mod.subdomain )

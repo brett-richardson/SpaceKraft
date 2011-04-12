@@ -1,0 +1,29 @@
+<h1>Listing sk_modules</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Subdomain</th>
+    <th>Enabled</th>
+    <th>Machine name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sk_modules.each do |sk_module| %>
+  <tr>
+    <td><%= sk_module.name %></td>
+    <td><%= sk_module.subdomain %></td>
+    <td><%= sk_module.enabled %></td>
+    <td><%= sk_module.machine_name %></td>
+    <td><%= link_to 'Show', sk_module %></td>
+    <td><%= link_to 'Edit', edit_sk_module_path(sk_module) %></td>
+    <td><%= link_to 'Destroy', sk_module, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sk module', new_sk_module_path %>

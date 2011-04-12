@@ -1,0 +1,10 @@
+%ul#secondary-menu
+
+	%li= link_to_unless_current "Home", root_path
+
+	- unless @user
+		%li= link_to_unless_current "Sign up", new_user_registration_path
+		%li= link_to_unless_current "Log in",  new_user_session_path
+
+	- else
+		%li= link_to_unless_current "Dashboard", dashboard_path
